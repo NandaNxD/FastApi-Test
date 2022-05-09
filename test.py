@@ -2,10 +2,10 @@ from importlib.resources import path
 from fastapi import Body
 import requests
 
-file = {'file': open('dx.jpg', 'rb')}
+file = {'file': open('in.jpg', 'rb')}
 
 def req():
-    response=requests.post('http://127.0.0.1:8000/handle-file',files=file)
+    response=requests.post('https://eb2f-117-213-242-137.in.ngrok.io/handle-file',files=file)
     print(response.json()) 
 
 req()

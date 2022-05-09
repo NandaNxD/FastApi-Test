@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 import requests
-from pydantic import BaseModel
-from typing import Optional
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File
 
 app=FastAPI()
 
