@@ -14,7 +14,7 @@ def getLicensePlateNumber(file):
 
 @app.get('/')
 def inx():
-    return "hello"
+    return "Api Working"
 
 # @app.post('/')
 # async def handle_file(file:bytes=File(...)):
