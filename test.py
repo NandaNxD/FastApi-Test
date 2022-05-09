@@ -1,5 +1,3 @@
-from importlib.resources import path
-from fastapi import Body
 import requests
 
 file = {'file': open('in.jpg', 'rb')}
