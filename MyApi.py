@@ -12,7 +12,7 @@ def getLicensePlateNumber(file):
         reg = response.json()['results'][0]['plate']
         return reg
 
-@app.post('/handle-file')
+@app.post('/')
 async def handle_file(file:bytes=File(...)):
     f=open('image.jpg','wb')
     f.write(file)
