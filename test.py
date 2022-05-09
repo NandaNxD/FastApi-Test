@@ -3,7 +3,7 @@ import requests
 file = {'file': open('in.jpg', 'rb')}
 
 def req():
-    response=requests.get('http://127.0.0.1:8000/')
+    response=requests.post('https://park11.herokuapp.com/',files=file)
     print(response.json()) 
 
 req()
