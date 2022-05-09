@@ -1,6 +1,6 @@
 import requests
 
-file = {'file': open('in.jpg', 'rb')}
+file = {'file': open('dx.jpg', 'rb')}
 
 def req():
     response=requests.post('https://smartparkingsystem1.herokuapp.com/',files=file)
