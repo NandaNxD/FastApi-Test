@@ -16,13 +16,13 @@ def getLicensePlateNumber(file):
 def inx():
     return "Api Working"
 
-# @app.post('/')
-# async def handle_file(file:bytes=File(...)):
-#     f=open('image.jpg','wb')
-#     f.write(file)
-#     f.close()
-#     r=open('image.jpg','rb')
-#     result=getLicensePlateNumber(r)
-#     r.close()
-#     return result
+@app.post('/')
+async def handle_file(file:bytes=File(...)):
+    f=open('image.jpg','wb')
+    f.write(file)
+    f.close()
+    r=open('image.jpg','rb')
+    result=getLicensePlateNumber(r)
+    r.close()
+    return result
     
