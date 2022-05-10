@@ -1,103 +1,100 @@
-2022-05-10T12:12:38.489315+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
-2022-05-10T12:12:38.489316+00:00 app[web.1]: self.load_wsgi()
-2022-05-10T12:12:38.489316+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
-2022-05-10T12:12:38.489316+00:00 app[web.1]: self.wsgi = self.app.wsgi()
-2022-05-10T12:12:38.489316+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
-2022-05-10T12:12:38.489317+00:00 app[web.1]: self.callable = self.load()
-2022-05-10T12:12:38.489317+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
-2022-05-10T12:12:38.489317+00:00 app[web.1]: return self.load_wsgiapp()
-2022-05-10T12:12:38.489318+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
-2022-05-10T12:12:38.489318+00:00 app[web.1]: return util.import_app(self.app_uri)
-2022-05-10T12:12:38.489318+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
-2022-05-10T12:12:38.489318+00:00 app[web.1]: mod = importlib.import_module(module)
-2022-05-10T12:12:38.489319+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
-2022-05-10T12:12:38.489319+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
-2022-05-10T12:12:38.489319+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
-2022-05-10T12:12:38.489320+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
-2022-05-10T12:12:38.489320+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
-2022-05-10T12:12:38.489320+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
-2022-05-10T12:12:38.489321+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 783, in exec_module
-2022-05-10T12:12:38.489321+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
-2022-05-10T12:12:38.489321+00:00 app[web.1]: File "/app/MyApi.py", line 5, in <module>
-2022-05-10T12:12:38.489322+00:00 app[web.1]: from Main import getLicensePlateNumber
-2022-05-10T12:12:38.489322+00:00 app[web.1]: File "/app/Main.py", line 2, in <module>
-2022-05-10T12:12:38.489322+00:00 app[web.1]: import cv2
-2022-05-10T12:12:38.489323+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/cv2/__init__.py", line 8, in <module>
-2022-05-10T12:12:38.489323+00:00 app[web.1]: from .cv2 import *
-2022-05-10T12:12:38.489323+00:00 app[web.1]: ImportError: libGL.so.1: cannot open shared object file: No such file or directory
-2022-05-10T12:12:38.489456+00:00 app[web.1]: [2022-05-10 12:12:38 +0000] [11] [INFO] Worker exiting (pid: 11)
-2022-05-10T12:12:38.493957+00:00 app[web.1]: [2022-05-10 12:12:38 +0000] [10] [ERROR] Exception in worker process
-2022-05-10T12:12:38.493959+00:00 app[web.1]: Traceback (most recent call last):
-2022-05-10T12:12:38.493960+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
-2022-05-10T12:12:38.493960+00:00 app[web.1]: worker.init_process()
-2022-05-10T12:12:38.493961+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/uvicorn/workers.py", line 62, in init_process
-2022-05-10T12:12:38.493961+00:00 app[web.1]: super(UvicornWorker, self).init_process()
-2022-05-10T12:12:38.493962+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
-2022-05-10T12:12:38.493962+00:00 app[web.1]: self.load_wsgi()
-2022-05-10T12:12:38.493962+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
-2022-05-10T12:12:38.493963+00:00 app[web.1]: self.wsgi = self.app.wsgi()
-2022-05-10T12:12:38.493963+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
-2022-05-10T12:12:38.493963+00:00 app[web.1]: self.callable = self.load()
-2022-05-10T12:12:38.493964+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
-2022-05-10T12:12:38.493964+00:00 app[web.1]: return self.load_wsgiapp()
-2022-05-10T12:12:38.493964+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
-2022-05-10T12:12:38.493965+00:00 app[web.1]: return util.import_app(self.app_uri)
-2022-05-10T12:12:38.493965+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
-2022-05-10T12:12:38.493965+00:00 app[web.1]: mod = importlib.import_module(module)
-2022-05-10T12:12:38.493966+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
-2022-05-10T12:12:38.493966+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
-2022-05-10T12:12:38.493966+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
-2022-05-10T12:12:38.493967+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
-2022-05-10T12:12:38.493967+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
-2022-05-10T12:12:38.493967+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
-2022-05-10T12:12:38.493968+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 783, in exec_module
-2022-05-10T12:12:38.493968+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
-2022-05-10T12:12:38.493968+00:00 app[web.1]: File "/app/MyApi.py", line 5, in <module>
-2022-05-10T12:12:38.493968+00:00 app[web.1]: from Main import getLicensePlateNumber
-2022-05-10T12:12:38.493969+00:00 app[web.1]: File "/app/Main.py", line 2, in <module>
-2022-05-10T12:12:38.493969+00:00 app[web.1]: import cv2
-2022-05-10T12:12:38.493970+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/cv2/__init__.py", line 8, in <module>
-2022-05-10T12:12:38.493970+00:00 app[web.1]: from .cv2 import *
-2022-05-10T12:12:38.493970+00:00 app[web.1]: ImportError: libGL.so.1: cannot open shared object file: No such file or directory
-2022-05-10T12:12:38.494116+00:00 app[web.1]: [2022-05-10 12:12:38 +0000] [10] [INFO] Worker exiting (pid: 10)
-2022-05-10T12:12:38.570034+00:00 app[web.1]: Traceback (most recent call last):
-2022-05-10T12:12:38.570100+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
-2022-05-10T12:12:38.570104+00:00 app[web.1]: self.sleep()
-2022-05-10T12:12:38.570111+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 357, in sleep
-2022-05-10T12:12:38.570117+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
-2022-05-10T12:12:38.570118+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
-2022-05-10T12:12:38.570118+00:00 app[web.1]: self.reap_workers()
-2022-05-10T12:12:38.570118+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
-2022-05-10T12:12:38.570119+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
-2022-05-10T12:12:38.570122+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
-2022-05-10T12:12:38.570125+00:00 app[web.1]: 
-2022-05-10T12:12:38.570126+00:00 app[web.1]: During handling of the above exception, another exception occurred:
-2022-05-10T12:12:38.570126+00:00 app[web.1]: 
-2022-05-10T12:12:38.570126+00:00 app[web.1]: Traceback (most recent call last):
-2022-05-10T12:12:38.570127+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
-2022-05-10T12:12:38.570127+00:00 app[web.1]: sys.exit(run())
-2022-05-10T12:12:38.570127+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
-2022-05-10T12:12:38.570946+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
-2022-05-10T12:12:38.570947+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 231, in run
-2022-05-10T12:12:38.570947+00:00 app[web.1]: super().run()
-2022-05-10T12:12:38.570948+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
-2022-05-10T12:12:38.570948+00:00 app[web.1]: Arbiter(self).run()
-2022-05-10T12:12:38.570948+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 229, in run
-2022-05-10T12:12:38.570949+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
-2022-05-10T12:12:38.570949+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
-2022-05-10T12:12:38.570949+00:00 app[web.1]: self.stop()
-2022-05-10T12:12:38.570950+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 393, in stop
-2022-05-10T12:12:38.570950+00:00 app[web.1]: time.sleep(0.1)
-2022-05-10T12:12:38.570956+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
-2022-05-10T12:12:38.570994+00:00 app[web.1]: self.reap_workers()
-2022-05-10T12:12:38.571004+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
-2022-05-10T12:12:38.571147+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
-2022-05-10T12:12:38.571196+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
-2022-05-10T12:12:38.728784+00:00 heroku[web.1]: Process exited with status 1
-2022-05-10T12:12:38.811265+00:00 heroku[web.1]: State changed from starting to crashed
-2022-05-10T12:12:50.000000+00:00 app[api]: Build succeeded
-2022-05-10T12:12:55.886853+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=smartparkingsystem1.herokuapp.com request_id=060ad365-afde-494e-ae55-1ffb63941f1f fwd="117.222.118.78" dyno= connect= service= status=503 bytes= protocol=https
-2022-05-10T12:15:15.402177+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=smartparkingsystem1.herokuapp.com request_id=2b7b56ef-2eda-4ef4-b598-fe2436e4bbc6 fwd="117.222.118.78" dyno= connect= service= status=503 bytes= protocol=https
-Terminate batch job (Y/N)? c
-Terminate batch job (Y/N)? 
-Terminate batch job (Y/N)? 
+2022-05-10T12:27:10.605448+00:00 app[web.1]: super(UvicornWorker, self).init_process()
+2022-05-10T12:27:10.605449+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2022-05-10T12:27:10.605449+00:00 app[web.1]: self.load_wsgi()
+2022-05-10T12:27:10.605449+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2022-05-10T12:27:10.605450+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2022-05-10T12:27:10.605450+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2022-05-10T12:27:10.605450+00:00 app[web.1]: self.callable = self.load()
+2022-05-10T12:27:10.605451+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2022-05-10T12:27:10.605451+00:00 app[web.1]: return self.load_wsgiapp()
+2022-05-10T12:27:10.605451+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2022-05-10T12:27:10.605452+00:00 app[web.1]: return util.import_app(self.app_uri)
+2022-05-10T12:27:10.605452+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+2022-05-10T12:27:10.605452+00:00 app[web.1]: mod = importlib.import_module(module)
+2022-05-10T12:27:10.605453+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
+2022-05-10T12:27:10.605453+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2022-05-10T12:27:10.605454+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2022-05-10T12:27:10.605454+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2022-05-10T12:27:10.605454+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+2022-05-10T12:27:10.605455+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+2022-05-10T12:27:10.605455+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+2022-05-10T12:27:10.605455+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2022-05-10T12:27:10.605455+00:00 app[web.1]: File "/app/MyApi.py", line 5, in <module>
+2022-05-10T12:27:10.605456+00:00 app[web.1]: from Main import getLicensePlateNumber
+2022-05-10T12:27:10.605456+00:00 app[web.1]: File "/app/Main.py", line 2, in <module>
+2022-05-10T12:27:10.605457+00:00 app[web.1]: import cv2
+2022-05-10T12:27:10.605457+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/cv2/__init__.py", line 3, in <module>
+2022-05-10T12:27:10.605457+00:00 app[web.1]: from .cv2 import *
+2022-05-10T12:27:10.605457+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2022-05-10T12:27:10.610184+00:00 app[web.1]: [2022-05-10 12:27:10 +0000] [11] [INFO] Worker exiting (pid: 11)
+2022-05-10T12:27:10.680307+00:00 app[web.1]: [2022-05-10 12:27:10 +0000] [12] [ERROR] Exception in worker process
+2022-05-10T12:27:10.680308+00:00 app[web.1]: Traceback (most recent call last):
+2022-05-10T12:27:10.680309+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+2022-05-10T12:27:10.680310+00:00 app[web.1]: worker.init_process()
+2022-05-10T12:27:10.680310+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/uvicorn/workers.py", line 62, in init_process
+2022-05-10T12:27:10.680310+00:00 app[web.1]: super(UvicornWorker, self).init_process()
+2022-05-10T12:27:10.680311+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 134, in init_process
+2022-05-10T12:27:10.680311+00:00 app[web.1]: self.load_wsgi()
+2022-05-10T12:27:10.680311+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+2022-05-10T12:27:10.680312+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2022-05-10T12:27:10.680312+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2022-05-10T12:27:10.680312+00:00 app[web.1]: self.callable = self.load()
+2022-05-10T12:27:10.680313+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+2022-05-10T12:27:10.680313+00:00 app[web.1]: return self.load_wsgiapp()
+2022-05-10T12:27:10.680313+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+2022-05-10T12:27:10.680313+00:00 app[web.1]: return util.import_app(self.app_uri)
+2022-05-10T12:27:10.680314+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/util.py", line 359, in import_app
+2022-05-10T12:27:10.680314+00:00 app[web.1]: mod = importlib.import_module(module)
+2022-05-10T12:27:10.680314+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/importlib/__init__.py", line 127, in import_module
+2022-05-10T12:27:10.680315+00:00 app[web.1]: return _bootstrap._gcd_import(name[level:], package, level)
+2022-05-10T12:27:10.680315+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+2022-05-10T12:27:10.680315+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+2022-05-10T12:27:10.680315+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+2022-05-10T12:27:10.680316+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+2022-05-10T12:27:10.680316+00:00 app[web.1]: File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+2022-05-10T12:27:10.680316+00:00 app[web.1]: File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+2022-05-10T12:27:10.680317+00:00 app[web.1]: File "/app/MyApi.py", line 5, in <module>
+2022-05-10T12:27:10.680317+00:00 app[web.1]: from Main import getLicensePlateNumber
+2022-05-10T12:27:10.680317+00:00 app[web.1]: File "/app/Main.py", line 2, in <module>
+2022-05-10T12:27:10.680318+00:00 app[web.1]: import cv2
+2022-05-10T12:27:10.680318+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/cv2/__init__.py", line 3, in <module>
+2022-05-10T12:27:10.680318+00:00 app[web.1]: from .cv2 import *
+2022-05-10T12:27:10.680319+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2022-05-10T12:27:10.680612+00:00 app[web.1]: [2022-05-10 12:27:10 +0000] [12] [INFO] Worker exiting (pid: 12)
+2022-05-10T12:27:10.684031+00:00 app[web.1]: Traceback (most recent call last):
+2022-05-10T12:27:10.684036+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 209, in run
+2022-05-10T12:27:10.684309+00:00 app[web.1]: self.sleep()
+2022-05-10T12:27:10.684311+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 357, in sleep
+2022-05-10T12:27:10.684485+00:00 app[web.1]: ready = select.select([self.PIPE[0]], [], [], 1.0)
+2022-05-10T12:27:10.684495+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2022-05-10T12:27:10.684624+00:00 app[web.1]: self.reap_workers()
+2022-05-10T12:27:10.684627+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2022-05-10T12:27:10.684815+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2022-05-10T12:27:10.684881+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2022-05-10T12:27:10.684899+00:00 app[web.1]: 
+2022-05-10T12:27:10.684900+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2022-05-10T12:27:10.684900+00:00 app[web.1]: 
+2022-05-10T12:27:10.684900+00:00 app[web.1]: Traceback (most recent call last):
+2022-05-10T12:27:10.684903+00:00 app[web.1]: File "/app/.heroku/python/bin/gunicorn", line 8, in <module>
+2022-05-10T12:27:10.684993+00:00 app[web.1]: sys.exit(run())
+2022-05-10T12:27:10.684996+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+2022-05-10T12:27:10.685082+00:00 app[web.1]: WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2022-05-10T12:27:10.685091+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 231, in run
+2022-05-10T12:27:10.685210+00:00 app[web.1]: super().run()
+2022-05-10T12:27:10.685221+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+2022-05-10T12:27:10.685305+00:00 app[web.1]: Arbiter(self).run()
+2022-05-10T12:27:10.685322+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 229, in run
+2022-05-10T12:27:10.685427+00:00 app[web.1]: self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2022-05-10T12:27:10.685437+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+2022-05-10T12:27:10.685590+00:00 app[web.1]: self.stop()
+2022-05-10T12:27:10.685594+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 393, in stop
+2022-05-10T12:27:10.685748+00:00 app[web.1]: time.sleep(0.1)
+2022-05-10T12:27:10.685758+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+2022-05-10T12:27:10.685870+00:00 app[web.1]: self.reap_workers()
+2022-05-10T12:27:10.685881+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+2022-05-10T12:27:10.686077+00:00 app[web.1]: raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2022-05-10T12:27:10.686115+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2022-05-10T12:27:10.848367+00:00 heroku[web.1]: Process exited with status 1
+2022-05-10T12:27:10.986871+00:00 heroku[web.1]: State changed from up to crashed
+2022-05-10T12:27:12.000000+00:00 app[api]: Build succeeded
+2022-05-10T12:27:35.787294+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=smartparkingsystem1.herokuapp.com request_id=35d98117-ff47-4aa1-b3c1-7fbe0b654e52 fwd="117.222.118.78" dyno= connect= service= status=503 bytes= protocol=https
