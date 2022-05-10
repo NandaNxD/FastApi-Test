@@ -135,6 +135,7 @@ def detectCharsInPlates(listOfPossiblePlates):
         #listOfPossiblePlates=listMatching
 
         possiblePlate.strChars = recognizeCharsInPlate(possiblePlate.imgThresh, longestListOfMatchingCharsInPlate)
+        return possiblePlate.strChars
         
 
     # end of big for loop that takes up most of the function
@@ -346,11 +347,3 @@ def recognizeCharsInPlate(imgThresh, listOfMatchingChars):
 
     return strChar
 # end function
-
-
-
-
-
-
-
-
