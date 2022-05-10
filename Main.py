@@ -16,7 +16,7 @@ SCALAR_RED = (0.0, 0.0, 255.0)
 ###################################################################################################
 def getLicensePlateNumber(file_name):
     blnKNNTrainingSuccessful = DetectChars.loadKNNDataAndTrainKNN()         # attempt KNN training
-    if blnKNNTrainingSuccessful == False:                               # if KNN training was not successful
+    if(blnKNNTrainingSuccessful == False):                               # if KNN training was not successful
         print("\nerror: KNN traning was not successful\n")  # show error message
         return None                                                # and exit program
     # end if
