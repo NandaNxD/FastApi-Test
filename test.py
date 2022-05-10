@@ -1,9 +1,9 @@
 import requests
-file = {'file': open('4.png', 'rb')}
+file = {'file': open('lp3.png', 'rb')}
 
 def req():
-    #response=requests.post('https://smartparkingsystem1.herokuapp.com/',files=file)
-    response=requests.post('http://localhost:8000/',files=file)
+    response=requests.post('https://smartparkingsystem1.herokuapp.com/',files=file)
+    #response=requests.post('http://localhost:8000/',files=file)
     if not response.ok:
         print('request failed')
         print(response.status_code)
@@ -13,5 +13,5 @@ def req():
         else:
             print(response.json()) 
 
-#print(getLicensePlateNumber())
+
 req()
